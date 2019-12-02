@@ -108,4 +108,14 @@ public class testcases {
 
 
 	}
+	@Test(priority=5)
+	//-----------------------------------------------correct email and empty password-------------------------------------------------------//
+	public void tc5() throws MalformedURLException, InterruptedException {     
+
+		AndroidDriver<AndroidElement> driver=Capabilities();
+		System.out.println("jenkinsCIapp");
+		
+
+	}
+
 }
