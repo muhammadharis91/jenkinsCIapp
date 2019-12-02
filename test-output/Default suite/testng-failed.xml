@@ -5,7 +5,7 @@
     <classes>
       <class name="testapk.testcases">
         <methods>
-          <include name="tc_a"/>
+          <include name="tc1"/>
         </methods>
       </class> <!-- testapk.testcases -->
     </classes>

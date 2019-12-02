@@ -87,7 +87,7 @@ public class testcases {
 		loadwait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.example.jenkins_ci_test:id/loginStatus")));
 		String toasttext = ao.checkloginstatus.getText();
 		System.out.println(toasttext);
-		Assert.assertEquals("Please enter valid email and password", toasttext);
+		Assert.assertEquals("Please enter valid email and passwords", toasttext);
 
 
 	}
