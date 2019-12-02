@@ -113,7 +113,7 @@ public class testcases {
 	public void tc5() throws MalformedURLException, InterruptedException {     
 
 		AndroidDriver<AndroidElement> driver=Capabilities();
-		System.out.println("jenkinsCIapp");
+		System.out.println("Test jenkinsCIapp");
 		
 
 	}
