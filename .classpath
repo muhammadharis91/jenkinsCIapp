@@ -43,5 +43,6 @@
 	<classpathentry kind="lib" path="E:/Haris/softwares/imp jars/selenium-3.141.59-nodeps-sources.jar"/>
 	<classpathentry kind="lib" path="E:/Haris/softwares/imp jars/slf4j-api-1.7.25.jar"/>
 	<classpathentry kind="lib" path="E:/Haris/softwares/imp jars/snakeyaml-1.19.jar"/>
+	<classpathentry kind="lib" path="E:/Haris/softwares/imp jars/javax.mail-api-1.5.6.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

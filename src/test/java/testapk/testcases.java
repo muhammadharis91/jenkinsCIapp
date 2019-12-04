@@ -6,6 +6,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import pageObjects.appobjects;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
@@ -39,6 +41,7 @@ public class testcases {
 	}
 
 	@Test(priority=1)
+	@Severity(SeverityLevel.BLOCKER)
 	//-----------------------------------------------Correct email and correct password-------------------------------------------------------//
 	public void tc1() throws MalformedURLException, InterruptedException {     
 
@@ -57,6 +60,7 @@ public class testcases {
 
 	}
 	@Test(priority=2)
+	@Severity(SeverityLevel.CRITICAL)
 	//-----------------------------------------------Incorrect email-------------------------------------------------------//
 	public void tc2() throws MalformedURLException, InterruptedException {     
 
@@ -76,6 +80,7 @@ public class testcases {
 	}
 
 	@Test(priority=3)
+	@Severity(SeverityLevel.NORMAL)
 	//-----------------------------------------------empty email and empty password-------------------------------------------------------//
 	public void tc3() throws MalformedURLException, InterruptedException {     
 
@@ -92,6 +97,7 @@ public class testcases {
 
 	}
 	@Test(priority=4)
+	@Severity(SeverityLevel.MINOR)
 	//-----------------------------------------------correct email and empty password-------------------------------------------------------//
 	public void tc4() throws MalformedURLException, InterruptedException {     
 
@@ -109,6 +115,7 @@ public class testcases {
 
 	}
 	@Test(priority=5)
+	@Severity(SeverityLevel.TRIVIAL)
 	//-----------------------------------------------correct email and empty password-------------------------------------------------------//
 	public void tc5() throws MalformedURLException, InterruptedException {     
 
