@@ -19,7 +19,7 @@ import io.appium.java_client.remote.MobileCapabilityType;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import pageObjects.appobjects;
-public class testcases {
+public class Testcases {
 	
 	public static AndroidDriver<AndroidElement> Capabilities() throws MalformedURLException
 	
