@@ -1,34 +1,29 @@
 package testapk;
+
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import pageObjects.appobjects;
-import java.util.concurrent.TimeUnit;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.testng.Assert;
-import org.testng.annotations.Test;
-import io.appium.java_client.MobileBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import static java.time.Duration.ofSeconds;
-import io.appium.java_client.android.nativekey.AndroidKey;
-import io.appium.java_client.android.nativekey.KeyEvent;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.remote.RemoteWebDriver;
-
-
 public class testcases {
-
+	
 	public static AndroidDriver<AndroidElement> Capabilities() throws MalformedURLException
-
+	
+	
 	{
 		File file = new File("src");
 		File location = new File(file,"app-release-signed.apk");
@@ -37,7 +32,9 @@ public class testcases {
 		cap.setCapability(MobileCapabilityType.AUTOMATION_NAME,"uiautomator2");
 		cap.setCapability(MobileCapabilityType.APP, location.getAbsolutePath());
 		AndroidDriver<AndroidElement> driver = new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"),cap);
+		System.out.println("driver testcase");
 		return driver;
+		
 	}
 
 	@Test(priority=1)
@@ -59,7 +56,7 @@ public class testcases {
 
 
 	}
-	@Test(priority=2)
+	@BeforeSuite
 	@Severity(SeverityLevel.CRITICAL)
 	//-----------------------------------------------Incorrect email-------------------------------------------------------//
 	public void tc2() throws MalformedURLException, InterruptedException {     
@@ -92,7 +89,7 @@ public class testcases {
 		loadwait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.example.jenkins_ci_test:id/loginStatus")));
 		String toasttext = ao.checkloginstatus.getText();
 		System.out.println(toasttext);
-		Assert.assertEquals("Please enter valid email and passwords", toasttext);
+		Assert.assertEquals("Please enter valid email and password", toasttext);
 
 
 	}
@@ -114,7 +111,7 @@ public class testcases {
 
 
 	}
-	@Test(priority=5)
+	@BeforeTest
 	@Severity(SeverityLevel.TRIVIAL)
 	//-----------------------------------------------correct email and empty password-------------------------------------------------------//
 	public void tc5() throws MalformedURLException, InterruptedException {     
